@@ -1,1 +1,89 @@
-<p>workspace works!</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="workspace.component.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+  <title>Plan your day</title>
+</head>
+<body>
+<header>
+  <div class="mainNav">
+    <div class="staticNav">
+      <h1><span class="logoLetter">Plan</span>Your Day</h1>
+      <div class="burgerMenu">
+        <span class = "bar"></span>
+        <span class = "bar"></span>
+        <span class = "bar"></span>
+      </div>
+    </div>
+    <ul id="myList">
+      <li id="generate">Add Note</li>
+      <li>To-Do Today</li>
+      <li>Delete Old</li>
+      <li>
+        <div class="dropdown">
+          <p>To-Do by Significance</p>
+          <div class="dropdown-content">
+            <a class = "dropItem" >Ordinary</a>
+            <a class = "dropItem" >Important</a>
+            <a class = "dropItem" >Urgent</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div>
+      <div class="dropdown">
+        <p>
+          <span>Hello, Username</span>
+        </p>
+        <div class="dropdown-content">
+          <a class="dropItem">Admin control Panel</a>
+          <a class="dropItem" >Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrapper">
+    <section id="mainGrid">
+
+      <div>
+<!--        <div *ngFor = "let todo of todos">-->
+        <form action="index.html" method="post">
+          <div class="noteColorHeader">
+            <div class="upperNoteHeader">
+              <select name="Importance">
+                <option value="Ordinary">Ordinary</option>
+                <option value="Important">Important</option>
+                <option value="Urgent">Urgent</option>
+              </select>
+              <p class="close">x</p>
+            </div>
+            <form class="deadlineForm" action="index.html" method="post">
+              <label class="deadlineLabel">Deadline: </label>
+              <textarea name="deadline" rows="1" cols="20" placeholder="YYYY-MM-dd-HH:mm"></textarea>
+            </form>
+          </div>
+          <div class="noteColorBody">
+            <textarea name="todoitem" rows="10" cols="34" placeholder="Enter your text here ..."></textarea>
+            <div class = "noteButtons">
+              <button class = "noteButton" type="submit">save</button>
+              <button class = "noteButton" type="submit">update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </div>
+</main>
+<footer>
+  <p>All right reserved by CodeAcademy</p>
+</footer>
+<!-- <script type="text/javascript" src="main.js"></script> -->
+</body>
+</html>

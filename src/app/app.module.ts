@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { UserViewComponent } from './user-view/user-view.component';
@@ -7,7 +8,11 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { HeaderComponent } from './header/header.component';
+import { WorkspaceTodayComponent } from './workspace-today/workspace-today.component';
+import { WorkspaceSignificanceComponent } from './workspace-significance/workspace-significance.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {RouterModule} from "@angular/router";
+import {CoreModule} from "./core/core.model";
 
 @NgModule({
   declarations: [
@@ -17,10 +22,15 @@ import { HeaderComponent } from './header/header.component';
     WorkspaceComponent,
     RegisterComponent,
     LoginComponent,
-    HeaderComponent
+    WorkspaceTodayComponent,
+    WorkspaceSignificanceComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

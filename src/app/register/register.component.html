@@ -1,1 +1,40 @@
-<p>register works!</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="register.component.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
+    <title>Register</title>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <section>
+          <h1 style="color: #eeeeee">Register!</h1>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <label>Username:</label>
+            <input type="text" formControlName="username" id="username" name="username">
+
+            <label>First Name:</label>
+            <input type="text" formControlName="firstName" id="firstName" name="firstName">
+
+            <label>Last Name:</label>
+            <input type="text" formControlName="lastName" id="lastName" name="lastName">
+
+            <label>Age:</label>
+            <input type="number" formControlName="age" id="age" name="age">
+
+            <label>Password:</label>
+            <input type="password" formControlName="password" id="password" name="password">
+
+            <label>Confirm Password:</label>
+            <input type="password" formControlName="confirmPassword" id="confirmPassword" name="confirmPassword">
+
+            <button type="submit" class="loginButton">Register</button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

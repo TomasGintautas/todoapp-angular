@@ -1,1 +1,66 @@
-<p>user-edit works!</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="user-edit.component.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+  <title>Plan your day</title>
+</head>
+<body>
+<header>
+  <div class="mainNav">
+    <div class="staticNav">
+      <h1><span class="logoLetter">Plan</span>Your Day</h1>
+    </div>
+    <ul id="myList">
+      <li id="generate">Add Note</li>
+      <li>To-Do Today</li>
+      <li>Delete Old</li>
+      <li>
+        <div class="dropdown">
+          <p>To-Do by Significance</p>
+          <div class="dropdown-content">
+            <a class = "dropItem" >Ordinary</a>
+            <a class = "dropItem" >Important</a>
+            <a class = "dropItem" >Urgent</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div>
+      <div class="dropdown">
+        <p>
+          <span>Hello, Username</span>
+        </p>
+        <div class="dropdown-content">
+          <a class="dropItem">Admin control Panel</a>
+          <a class="dropItem" >Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="wrapper">
+  <h1>Edit user</h1>
+  <hr>
+  <hr>
+  <hr>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label>Username:</label>
+    <input type="text" formControlName="username" id="username" name="username">
+
+    <label>First Name:</label>
+    <input type="text" formControlName="firstName" id="firstName" name="firstName">
+
+    <label>Last Name:</label>
+    <input type="text" formControlName="lastName" id="lastName" name="lastName">
+
+    <label>Age:</label>
+    <input type="number" formControlName="age" id="age" name="age">
+    <div>
+      <button type="submit">Update</button>
+      <a class = "cancel" [routerLink]="'/admin/panel/view'">Cancel</a>
+    </div>
+  </form>
+</main>

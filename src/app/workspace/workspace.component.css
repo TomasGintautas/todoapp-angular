@@ -1,0 +1,379 @@
+html{
+  margin: 0;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(50, 48, 48, 1) 3%, rgba(8, 8, 11, 1) 67%) no-repeat fixed;
+}
+
+*{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  height: 100%;
+}
+
+header{
+  margin: 0 auto;
+  max-width: 490px;
+  min-height: 15%;
+}
+
+ul{
+  color: white;
+  list-style: none;
+  min-height: 15%;
+}
+
+li{
+  margin: 10px;
+  font-size: 20px;
+}
+
+li:hover{
+  background-color: rgba(50,48,48,1);
+}
+
+.dropItem {
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 2px 3px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header div p{
+  display: none;
+}
+
+#myList{
+  display: none;
+  text-align: center;
+}
+
+.logoLetter{
+  color: black;
+  background-image: url("src/assets/wideNote.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  width: 100px;
+  height: 60px;
+  padding: 20px;
+}
+
+h1{
+  font-size: 2em;
+  color: white;
+}
+
+.burgerMenu{
+  display: block;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.burgerMenu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerMenu.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burgerMenu.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mainNav{
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+  margin-bottom: 70%;
+}
+
+.staticNav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100%;
+}
+
+.wrapper {
+  max-width: 490px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#mainGrid{
+  display: grid;
+  grid-template-columns: 240px 240px;
+  grid-gap: 10px;
+}
+
+.noteColorHeader{
+  background: #ffe680;
+}
+
+.noteColorBody{
+  background: #fff6a8;
+}
+
+textarea{
+  background: transparent;
+  border: 0 none;
+  resize: none;
+  height: 100%;
+  padding: 0px;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+textarea:focus {
+  border: none;
+  outline: 0;
+}
+
+.noteHeaderLeft{
+  display: flex;
+}
+
+.upperNoteHeader{
+  display: flex;
+  justify-content: space-between;
+}
+
+select{
+  background: transparent;
+  border: 0 none;
+  resize: none;
+}
+select:focus{
+  border: none;
+  outline: 0;
+}
+
+.noteHeaderLeft > p{
+  font-size: 12px;
+  font-weight: bold;
+  padding: 1px 4px;
+}
+
+.noteHeaderLeft > select{
+  font-size: 12px;
+  font-weight: bold;
+  margin: 1px;
+}
+
+.noteHeader > p{
+  padding: 1px 6px 1px 2px;
+  font-weight: bold;
+}
+
+.deadlineForm{
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+}
+
+.deadlineLabel{
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.close{
+  cursor: pointer;
+  font-weight: bold;
+  padding-right: 4px;
+}
+
+#generate{
+  cursor: pointer;
+}
+
+footer{
+  margin: 0 auto;
+  max-width: 490px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  position: sticky;
+  top: 95%;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+}
+
+.noteButtons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.noteButton{
+  background-color: transparent;
+  cursor: pointer;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  header{
+    max-width: 740px;
+    height: 10%;
+  }
+
+  li:hover{
+    background-color: transparent;
+    color: lightgray;
+  }
+
+  header div p{
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+  }
+
+  .burgerMenu{
+    display: none;
+  }
+
+  #myList{
+    display: flex;
+  }
+
+  .mainNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wrapper {
+    max-width: 740px;
+  }
+
+  #mainGrid{
+    grid-template-columns: 240px 240px 240px ;
+  }
+
+  .deadlineLabel{
+    font-size: 12px;
+    margin-left: 6px;
+  }
+
+  .close{
+    padding-right: 5px;
+  }
+
+  footer{
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  header{
+    max-width: 1230px;
+    height: 10%;
+  }
+
+  li{
+    font-size: 24px;
+  }
+
+  li:hover{
+    background-color: transparent;
+    color: lightgray;
+  }
+
+  header div p{
+    display: inline-block;
+    color: white;
+    font-size: 22px;
+  }
+
+  .burgerMenu{
+    display: none;
+  }
+
+  .mainNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wrapper {
+    max-width: 1230px;
+  }
+
+  #mainGrid{
+    grid-template-columns: 300px 300px 300px 300px;
+  }
+
+  textarea{
+    font-size: 16px;
+  }
+
+  .noteHeaderLeft > p{
+    font-size: 14px;
+    padding: 2px 4px;
+  }
+
+  .noteHeaderLeft > select{
+    font-size: 14px;
+    margin: 2px;
+  }
+
+  .noteHeader > p{
+    padding: 2px 6px 2px 2px;
+  }
+
+  .deadlineLabel{
+    font-size: 16px;
+  }
+
+  .close{
+    padding-right: 6px;
+  }
+
+  footer{
+    font-size: 14px;
+  }
+}

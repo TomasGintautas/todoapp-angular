@@ -1,1 +1,27 @@
-<p>login works!</p>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="login.component.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
+  <title>Log In</title>
+</head>
+<body>
+  <main>
+    <div class="wrapper">
+      <section>
+        <h1 style="color: #eeeeee">Log In!</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <label for="username" >Username:</label>
+          <input type="text" id="username" formControlName="username" name="username">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" formControlName="password" name="password">
+          <p>Don't have an account? <a class="spanStyle" href="register.html">Click here</a> to register!</p>
+
+          <button type="submit" class="loginButton">Log In</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>

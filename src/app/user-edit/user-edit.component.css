@@ -1,0 +1,219 @@
+html{
+  margin: 0;
+  height: 100%;
+  background: white no-repeat fixed;
+}
+
+*{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  height: 100%;
+}
+
+header{
+  margin: 0 auto;
+  max-width: 490px;
+  min-height: 15%;
+}
+
+ul{
+  color: black;
+  list-style: none;
+  min-height: 15%;
+}
+
+li{
+  margin: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+li:hover{
+  background-color: rgba(50,48,48,1);
+}
+
+.dropItem {
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 2px 3px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header div p{
+  display: none;
+}
+
+p{
+  color: black;
+}
+
+#myList{
+  display: none;
+  text-align: center;
+}
+
+.logoLetter{
+  color: black;
+  background-image: url("src/assets/wideNote.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  width: 100px;
+  height: 60px;
+  padding: 20px;
+}
+
+h1{
+  font-size: 2em;
+  color: black;
+}
+
+.mainNav{
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+  margin-bottom: 70%;
+}
+
+.staticNav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100%;
+}
+
+.wrapper {
+  max-width: 490px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+label{
+  font-size: 24px;
+}
+
+input{
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+button{
+  height: 60px;
+  width: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: dodgerblue;
+  border: black solid 2px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel{
+  font-size: 24px;
+  color: dodgerblue;
+  text-decoration: underline;
+  margin-left: 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  header{
+    max-width: 740px;
+    height: 10%;
+  }
+
+  li:hover{
+    background-color: transparent;
+  }
+
+  header div p{
+    display: inline-block;
+    color: black;
+    font-size: 18px;
+  }
+
+  #myList{
+    display: flex;
+  }
+
+  .mainNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wrapper {
+    max-width: 740px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  header{
+    max-width: 1230px;
+    height: 10%;
+  }
+
+  li{
+    font-size: 24px;
+  }
+
+  li:hover{
+    background-color: transparent;
+  }
+
+  header div p{
+    display: inline-block;
+    color: black;
+    font-size: 22px;
+  }
+
+  .mainNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wrapper {
+    max-width: 1230px;
+  }
+
+}
