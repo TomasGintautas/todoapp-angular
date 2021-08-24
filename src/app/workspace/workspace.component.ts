@@ -4,6 +4,8 @@ import {ToDoService} from "../core/services/todo.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
+declare const generateNote: any;
+
 @Component({
   selector: 'app-workspace',
   templateUrl: './workspace.component.html',
@@ -16,6 +18,7 @@ export class WorkspaceComponent implements OnInit {
   todo: Todo;
 
   todoForm: FormGroup;
+
 
   constructor(private toDoService: ToDoService,
               private route: ActivatedRoute,
@@ -58,4 +61,9 @@ export class WorkspaceComponent implements OnInit {
       this.router.navigate(['/workspace/' + this.todo.ownerId + '/todo'])
     });
   }
+
+  onGenerate() {
+    generateNote();
+  }
+
 }

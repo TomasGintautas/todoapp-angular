@@ -27,6 +27,6 @@ export class UserViewComponent implements OnInit {
     this.userService.deleteUser(id).subscribe(data => {
       this.router.navigate(['/admin/panel/view'])
     });
+    window.location.reload();
   }
 }
-// location reload

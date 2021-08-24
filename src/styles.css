@@ -3,3 +3,119 @@ html{
   height: 100%;
   background-color: #7e9b88;
 }
+#mainGrid{
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-gap: 10px;
+}
+
+.noteColorHeader{
+  background: #ffe680;
+}
+
+.noteColorBody{
+  background: #fff6a8;
+}
+
+textarea{
+  background: transparent;
+  border: 0 none;
+  resize: none;
+  height: 100%;
+  padding: 0px;
+  margin-left: 6px;
+  font-size: 16px;
+}
+
+textarea:focus {
+  border: none;
+  outline: 0;
+}
+
+.noteHeaderLeft{
+  display: flex;
+}
+
+.upperNoteHeader{
+  display: flex;
+  justify-content: space-between;
+  height: 24px;
+}
+
+select{
+  background: transparent;
+  border: 0 none;
+  resize: none;
+  height: 23.75px;
+}
+select:focus{
+  border: none;
+  outline: 0;
+}
+
+.noteHeaderLeft > p{
+  font-size: 14px;
+  padding: 2px 4px;
+  font-weight: bold;
+}
+
+.noteHeaderLeft > select{
+  font-weight: bold;
+  font-size: 14px;
+  margin: 2px;
+}
+
+.noteHeader > p{
+  padding: 1px 6px 1px 2px;
+  font-weight: bold;
+}
+
+.deadlineForm{
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+  height: 26px;
+}
+
+.deadlineLabel{
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.close{
+  cursor: pointer;
+  font-weight: bold;
+  padding-right: 4px;
+}
+
+#generate{
+  cursor: pointer;
+}
+
+.noteButtons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.noteButton{
+  background-color: transparent;
+  cursor: pointer;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.close{
+  padding-right: 6px;
+}
+
+.deadlineLabel{
+  font-size: 16px;
+}
+
+.noteHeader > p{
+  padding: 2px 6px 2px 2px;
+}

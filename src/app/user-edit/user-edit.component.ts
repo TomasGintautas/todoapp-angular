@@ -34,12 +34,11 @@ export class UserEditComponent implements OnInit {
       this.updateForm.setValue({
         'username' : data.username,
         'firstName' : data.firstName,
-        'lasName' : data.lastName,
+        'lastName' : data.lastName,
         'age' : data.age
       });
     });
   }
-  //TODO: Kodel neskaito ID sitoj vietoj?
 
   onSubmit(): void {
     this.userService.updateUser(this.user.id, this.updateForm.value).subscribe(data => {

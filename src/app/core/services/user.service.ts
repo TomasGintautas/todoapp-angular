@@ -19,7 +19,7 @@ export class UserService {
               private jwtService: JwtService) { }
 
   getUser(id: any): Observable<User> {
-    return this.apiService.get('/users/' + id);
+    return this.apiService.get('/user/' + id);
   }
 
   getUsers(): Observable<User[]> {
