@@ -4,6 +4,10 @@ html{
   background: white no-repeat fixed;
 }
 
+body{
+  background-color: #7e9b88;
+}
+
 *{
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -14,9 +18,8 @@ body{
 }
 
 header{
-  margin: 0 auto;
-  max-width: 490px;
-  min-height: 15%;
+  max-width: 1230px;
+  height: 10%;
 }
 
 ul{
@@ -27,12 +30,13 @@ ul{
 
 li{
   margin: 10px;
-  font-size: 20px;
+  font-size: 24px;
   color: black;
 }
 
 li:hover{
-  background-color: rgba(50,48,48,1);
+  background-color: transparent;
+  color: white;
 }
 
 .dropItem {
@@ -41,10 +45,12 @@ li:hover{
   border: none;
   cursor: pointer;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -70,7 +76,9 @@ li:hover{
 }
 
 header div p{
-  display: none;
+  display: inline-block;
+  color: black;
+  font-size: 22px;
 }
 
 p{
@@ -78,7 +86,7 @@ p{
 }
 
 #myList{
-  display: none;
+  display: flex;
   text-align: center;
 }
 
@@ -98,26 +106,13 @@ h1{
   color: black;
 }
 
-.burgerMenu{
-  display: block;
-  cursor: pointer;
-}
-
-.bar{
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: white;
-}
-
 .mainNav{
-  overflow: hidden;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   min-height: 100%;
-  margin-bottom: 70%;
+  padding-bottom: 80px;
+  margin: 0 auto;
 }
 
 .staticNav{
@@ -128,77 +123,7 @@ h1{
 }
 
 .wrapper {
-  max-width: 490px;
+  max-width: 1230px;
   margin: 0 auto;
   padding: 0 10px;
-}
-
-#mainGrid{
-  display: grid;
-  grid-template-columns: 240px 240px;
-  grid-gap: 10px;
-}
-
-
-@media screen and (min-width: 768px) {
-  header{
-    max-width: 740px;
-    height: 10%;
-  }
-
-  li:hover{
-    background-color: transparent;
-  }
-
-  header div p{
-    display: inline-block;
-    color: black;
-    font-size: 18px;
-  }
-
-  #myList{
-    display: flex;
-  }
-
-  .mainNav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .wrapper {
-    max-width: 740px;
-  }
-}
-
-@media screen and (min-width: 1281px) {
-  header{
-    max-width: 1230px;
-    height: 10%;
-  }
-
-  li{
-    font-size: 24px;
-  }
-
-  li:hover{
-    background-color: transparent;
-  }
-
-  header div p{
-    display: inline-block;
-    color: black;
-    font-size: 22px;
-  }
-
-  .mainNav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .wrapper {
-    max-width: 1230px;
-  }
-
 }

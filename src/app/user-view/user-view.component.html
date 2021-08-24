@@ -8,7 +8,7 @@
   <title>Plan your day</title>
 </head>
 <body>
-<header>
+<header class="wrapper">
   <div class="mainNav">
     <div class="staticNav">
       <h1><span class="logoLetter">Plan</span>Your Day</h1>
@@ -17,35 +17,31 @@
       <li id="generate">Add Note</li>
       <li>To-Do Today</li>
       <li>Delete Old</li>
+      <li class="dropdown">
+          <span>To-Do by Significance</span>
+          <div class="dropdown-content">
+            <a class="dropItem">Ordinary</a>
+            <a class="dropItem">Important</a>
+            <a class="dropItem">Urgent</a>
+          </div>
+      </li>
       <li>
         <div class="dropdown">
-          <p>To-Do by Significance</p>
+          <p>
+            <span>Hello, Username</span>
+          </p>
           <div class="dropdown-content">
-            <a class = "dropItem" >Ordinary</a>
-            <a class = "dropItem" >Important</a>
-            <a class = "dropItem" >Urgent</a>
+            <a class="dropItem">Admin control Panel</a>
+            <a class="dropItem">Logout</a>
           </div>
         </div>
       </li>
     </ul>
-    <div>
-      <div class="dropdown">
-        <p>
-          <span>Hello, Username</span>
-        </p>
-        <div class="dropdown-content">
-          <a class="dropItem">Admin control Panel</a>
-          <a class="dropItem" >Logout</a>
-        </div>
-      </div>
-    </div>
   </div>
 </header>
 <main class="wrapper">
   <h1>All users</h1>
-  <hr>
-  <hr>
-  <hr>
+  <hr style="margin-bottom: 20px">
   <div class="row">
     <div class="col">
       <table class="table table-hover">
@@ -58,8 +54,8 @@
           <th>Age</th>
           <th>Created</th>
           <th>Updated</th>
-          <th> </th>
-          <th> </th>
+          <th></th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
@@ -71,12 +67,11 @@
           <td>{{user.age}}</td>
           <td>{{user.created}}</td>
           <td>{{user.updated}}</td>
-          <td [routerLink]="'/admin/panel/edit' + user?.id">EDIT</td>
-          <td><a (click)="onDelete()">DELETE</a></td>
+          <td [routerLink]="'/admin/panel/edit/' + user?.id" style="cursor: pointer">EDIT</td>
+          <td (click)="onDelete(user.id)" style="cursor: pointer">DELETE</td>
         </tr>
         </tbody>
       </table>
     </div>
   </div>
 </main>
-

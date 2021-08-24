@@ -8,42 +8,35 @@
   <title>Plan your day</title>
 </head>
 <body>
-<header>
+<header class="wrapper">
   <div class="mainNav">
     <div class="staticNav">
       <h1><span class="logoLetter">Plan</span>Your Day</h1>
-      <div class="burgerMenu">
-        <span class = "bar"></span>
-        <span class = "bar"></span>
-        <span class = "bar"></span>
-      </div>
     </div>
     <ul id="myList">
       <li id="generate">Add Note</li>
       <li>To-Do Today</li>
       <li>Delete Old</li>
+      <li class="dropdown">
+        <span>To-Do by Significance</span>
+        <div class="dropdown-content">
+          <a class="dropItem">Ordinary</a>
+          <a class="dropItem">Important</a>
+          <a class="dropItem">Urgent</a>
+        </div>
+      </li>
       <li>
         <div class="dropdown">
-          <p>To-Do by Significance</p>
+          <p>
+            <span>Hello, Username</span>
+          </p>
           <div class="dropdown-content">
-            <a class = "dropItem" >Ordinary</a>
-            <a class = "dropItem" >Important</a>
-            <a class = "dropItem" >Urgent</a>
+            <a class="dropItem">Admin control Panel</a>
+            <a class="dropItem">Logout</a>
           </div>
         </div>
       </li>
     </ul>
-    <div>
-      <div class="dropdown">
-        <p>
-          <span>Hello, Username</span>
-        </p>
-        <div class="dropdown-content">
-          <a class="dropItem">Admin control Panel</a>
-          <a class="dropItem" >Logout</a>
-        </div>
-      </div>
-    </div>
   </div>
 </header>
 
@@ -69,7 +62,7 @@
             </form>
           </div>
           <div class="noteColorBody">
-            <textarea name="todoitem" rows="10" cols="34" placeholder="Enter your text here ..."></textarea>
+            <textarea name="todoitem" rows="10" cols="30" placeholder="Enter your text here ..."></textarea>
             <div class = "noteButtons">
               <button class = "noteButton" type="submit">save</button>
               <button class = "noteButton" type="submit">update</button>
@@ -81,9 +74,6 @@
     </section>
   </div>
 </main>
-<footer>
-  <p>All right reserved by CodeAcademy</p>
-</footer>
 <!-- <script type="text/javascript" src="main.js"></script> -->
 </body>
 </html>

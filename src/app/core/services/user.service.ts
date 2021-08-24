@@ -5,6 +5,7 @@ import {User} from "../models/user.model";
 import {JwtService} from "./jwt.service";
 import {Registration} from "../models/registration.model";
 import {Router} from "@angular/router";
+import {Update} from "../models/update.model";
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,7 @@ export class UserService {
     this.apiService.post('/login', {username: username, password: password}).subscribe(data => {
       this.user = data.user;
       this.jwtService.saveToken(data.accessToken);
-      this.router.navigate(['/']);
+      this.router.navigate(['/workspace/' + this.user.id + '/todo']);
     });
   }
 
@@ -37,8 +38,8 @@ export class UserService {
     return this.apiService.delete('/admin/panel/view/' + id);
   }
 
-  updateUser(id: any, user: User): Observable<User> {
-    return this.apiService.put('/admin/panel/edit/' + id, user);
+  updateUser(id: any, update: Update): Observable<User> {
+    return this.apiService.put('/admin/panel/edit/' + id, update);
   }
 
   register(registration: Registration): Observable<any> {

@@ -8,7 +8,7 @@
   <title>Plan your day</title>
 </head>
 <body>
-<header>
+<header class="wrapper">
   <div class="mainNav">
     <div class="staticNav">
       <h1><span class="logoLetter">Plan</span>Your Day</h1>
@@ -17,47 +17,43 @@
       <li id="generate">Add Note</li>
       <li>To-Do Today</li>
       <li>Delete Old</li>
+      <li class="dropdown">
+        <span>To-Do by Significance</span>
+        <div class="dropdown-content">
+          <a class="dropItem">Ordinary</a>
+          <a class="dropItem">Important</a>
+          <a class="dropItem">Urgent</a>
+        </div>
+      </li>
       <li>
         <div class="dropdown">
-          <p>To-Do by Significance</p>
+          <p>
+            <span>Hello, Username</span>
+          </p>
           <div class="dropdown-content">
-            <a class = "dropItem" >Ordinary</a>
-            <a class = "dropItem" >Important</a>
-            <a class = "dropItem" >Urgent</a>
+            <a class="dropItem">Admin control Panel</a>
+            <a class="dropItem">Logout</a>
           </div>
         </div>
       </li>
     </ul>
-    <div>
-      <div class="dropdown">
-        <p>
-          <span>Hello, Username</span>
-        </p>
-        <div class="dropdown-content">
-          <a class="dropItem">Admin control Panel</a>
-          <a class="dropItem" >Logout</a>
-        </div>
-      </div>
-    </div>
   </div>
 </header>
 <main class="wrapper">
   <h1>Edit user</h1>
   <hr>
-  <hr>
-  <hr>
-  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-    <label>Username:</label>
+  <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+    <label for="username">Username:</label>
     <input type="text" formControlName="username" id="username" name="username">
 
-    <label>First Name:</label>
+    <label for = "firstName">First Name:</label>
     <input type="text" formControlName="firstName" id="firstName" name="firstName">
 
-    <label>Last Name:</label>
+    <label for = "lastName">Last Name:</label>
     <input type="text" formControlName="lastName" id="lastName" name="lastName">
 
-    <label>Age:</label>
-    <input type="number" formControlName="age" id="age" name="age">
+    <label for = "age">Age:</label>
+    <input type="number" formControlName="age" id="age" name="age" >
     <div>
       <button type="submit">Update</button>
       <a class = "cancel" [routerLink]="'/admin/panel/view'">Cancel</a>

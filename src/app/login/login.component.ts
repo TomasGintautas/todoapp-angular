@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //TODO: deti .subscribe + navigate ?
   onSubmit() {
     this.userService.login(this.loginForm.value.username, this.loginForm.value.password);
   }

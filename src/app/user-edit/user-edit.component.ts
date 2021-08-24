@@ -13,13 +13,13 @@ export class UserEditComponent implements OnInit {
 
   user: User;
 
-  userForm: FormGroup;
+  updateForm: FormGroup;
 
   constructor(private fb: FormBuilder,
               private userService: UserService,
               private route: ActivatedRoute,
               private router: Router) {
-    this.userForm = this.fb.group({
+    this.updateForm = this.fb.group({
       'username': ['', Validators.required],
       'firstName': ['', Validators.required],
       'lastName': ['', Validators.required],
@@ -31,7 +31,7 @@ export class UserEditComponent implements OnInit {
     this.userService.getUser(this.route.snapshot.paramMap.get('id')).subscribe(data => {
       this.user = data;
 
-      this.userForm.setValue({
+      this.updateForm.setValue({
         'username' : data.username,
         'firstName' : data.firstName,
         'lasName' : data.lastName,
@@ -39,9 +39,10 @@ export class UserEditComponent implements OnInit {
       });
     });
   }
+  //TODO: Kodel neskaito ID sitoj vietoj?
 
   onSubmit(): void {
-    this.userService.updateUser(this.user.id, this.userForm.value).subscribe(data => {
+    this.userService.updateUser(this.user.id, this.updateForm.value).subscribe(data => {
       this.router.navigate(['/admin/panel/view'])
     });
   }

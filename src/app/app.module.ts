@@ -13,6 +13,7 @@ import { WorkspaceSignificanceComponent } from './workspace-significance/workspa
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {CoreModule} from "./core/core.model";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {CoreModule} from "./core/core.model";
     ReactiveFormsModule,
     RouterModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

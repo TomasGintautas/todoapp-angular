@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     this.userService.register(this.registerForm.value).subscribe(data => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
     });
   }
 }

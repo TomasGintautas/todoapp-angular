@@ -1,0 +1,233 @@
+html{
+  margin: 0;
+  height: 100%;
+}
+
+body{
+  background-color: #7e9b88;
+  height: 100%;
+}
+
+*{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+header{
+  max-width: 1230px;
+  height: 10%;
+}
+
+ul{
+  color: black;
+  list-style: none;
+  min-height: 15%;
+}
+
+li{
+  margin: 10px;
+  font-size: 24px;
+  color: black;
+}
+
+li:hover{
+  background-color: transparent;
+  color: white;
+}
+
+.dropItem {
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 2px 3px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header div p{
+  display: inline-block;
+  color: black;
+  font-size: 22px;
+}
+
+#myList{
+  display: flex;
+  text-align: center;
+}
+
+.logoLetter{
+  color: black;
+  background-image: url("src/assets/wideNote.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  width: 100px;
+  height: 60px;
+  padding: 20px;
+}
+
+h1{
+  font-size: 2em;
+  color: black;
+}
+
+.mainNav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100%;
+  padding-bottom: 80px;
+  margin: 0 auto;
+}
+
+.staticNav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100%;
+}
+
+.wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#mainGrid{
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-gap: 10px;
+}
+
+.noteColorHeader{
+  background: #ffe680;
+}
+
+.noteColorBody{
+  background: #fff6a8;
+}
+
+textarea{
+  background: transparent;
+  border: 0 none;
+  resize: none;
+  height: 100%;
+  padding: 0px;
+  margin-left: 6px;
+  font-size: 16px;
+}
+
+textarea:focus {
+  border: none;
+  outline: 0;
+}
+
+.noteHeaderLeft{
+  display: flex;
+}
+
+.upperNoteHeader{
+  display: flex;
+  justify-content: space-between;
+}
+
+select{
+  background: transparent;
+  border: 0 none;
+  resize: none;
+}
+select:focus{
+  border: none;
+  outline: 0;
+}
+
+.noteHeaderLeft > p{
+  font-size: 14px;
+  padding: 2px 4px;
+  font-weight: bold;
+}
+
+.noteHeaderLeft > select{
+  font-weight: bold;
+  font-size: 14px;
+  margin: 2px;
+}
+
+.noteHeader > p{
+  padding: 1px 6px 1px 2px;
+  font-weight: bold;
+}
+
+.deadlineForm{
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+}
+
+.deadlineLabel{
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.close{
+  cursor: pointer;
+  font-weight: bold;
+  padding-right: 4px;
+}
+
+#generate{
+  cursor: pointer;
+}
+
+.noteButtons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.noteButton{
+  background-color: transparent;
+  cursor: pointer;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.close{
+  padding-right: 6px;
+}
+
+.deadlineLabel{
+  font-size: 16px;
+}
+
+.noteHeader > p{
+  padding: 2px 6px 2px 2px;
+}

@@ -23,9 +23,10 @@ export class UserViewComponent implements OnInit {
     });
   }
 
-  onDelete(): void {
-    this.userService.deleteUser(this.user.id).subscribe(data => {
+  onDelete(id: number): void {
+    this.userService.deleteUser(id).subscribe(data => {
       this.router.navigate(['/admin/panel/view'])
     });
   }
 }
+// location reload
