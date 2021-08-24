@@ -31,7 +31,6 @@ function generateNote(){
   importance.appendChild(optionTwo);
   importance.appendChild(optionThree);
 
-
   let closer = document.createElement("p");
   closer.className = "close";
  // closer.setAttribute("(click)","onDelete()");

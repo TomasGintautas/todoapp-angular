@@ -3,6 +3,8 @@ import {Todo} from "../core/models/todo.model";
 import {ToDoService} from "../core/services/todo.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {User} from "../core/models/user.model";
+import {UserService} from "../core/services/user.service";
 
 declare const generateNote: any;
 
@@ -19,11 +21,14 @@ export class WorkspaceComponent implements OnInit {
 
   todoForm: FormGroup;
 
+  user: User;
 
   constructor(private toDoService: ToDoService,
               private route: ActivatedRoute,
               private router: Router,
-              private fb: FormBuilder) {
+              private fb: FormBuilder,
+              private userService: UserService) {
+
 
     this.todoForm = this.fb.group({
         'significance': ['', Validators.required],
@@ -35,6 +40,9 @@ export class WorkspaceComponent implements OnInit {
   ngOnInit(): void {
     this.toDoService.getUserToDo(this.route.snapshot.paramMap.get('id')).subscribe(data => {
       this.todos = data;
+    });
+    this.userService.getUser(this.route.snapshot.paramMap.get('id')).subscribe(data => {
+      this.user = data;
     });
   }
 
