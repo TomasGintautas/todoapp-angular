@@ -1,7 +1,7 @@
 export interface Todo{
   id: number;
   ownerId: number;
-  significance: string;
+  significanceId: number;
   toDoText: string;
   deadline: string;
   created: string;

@@ -44,6 +44,9 @@ export class WorkspaceComponent implements OnInit {
     this.userService.getUser(this.route.snapshot.paramMap.get('id')).subscribe(data => {
       this.user = data;
     });
+    this.toDoService.getToDo(this.route.snapshot.paramMap.get('id'), this.route.snapshot.paramMap.get('toDoId')).subscribe(data => {
+      this.todo = data;
+    });
   }
 
   onDelete(): void {

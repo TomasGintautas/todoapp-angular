@@ -15,6 +15,10 @@ export class ToDoService {
     return this.apiService.get('/workspace/'+ id + '/todo')
   }
 
+  getToDo(id: any, toDoId: any): Observable<Todo>{
+    return this.apiService.get('/workspace/'+ id + '/todo/' +  toDoId)
+  }
+
   getUserToDoToday(id: any): Observable<Todo[]>{
     return this.apiService.get('/workspace/'+ id + '/today')
   }

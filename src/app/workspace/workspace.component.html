@@ -28,7 +28,7 @@
           <li>
             <div class="dropdown">
               <p>Hello,
-                <span>{{user.username}}</span>
+                <span>{{user?.username}}</span>
               </p>
               <div class="dropdown-content">
                 <a class="dropItem">Admin control Panel</a>
@@ -47,11 +47,11 @@
               <div class="noteColorHeader">
                 <div class="upperNoteHeader">
                   <select name="Importance">
-                    <option value="Ordinary">Ordinary</option>
-                    <option value="Important">Important</option>
-                    <option value="Urgent">Urgent</option>
+                    <option value="Ordinary" ngValue="1" [selected]="todo.significanceId == 1">Ordinary</option>
+                    <option value="Important" ngValue="2" [selected]="todo.significanceId == 2">Important</option>
+                    <option value="Urgent" ngValue="3" [selected]="todo.significanceId == 3">Urgent</option>
                   </select>
-                  <p class="close">x</p>
+                  <p class="close" (click)="onDelete()">x</p>
                 </div>
                 <div class="deadlineForm">
                   <label class="deadlineLabel">Deadline: </label>
@@ -61,8 +61,8 @@
               <div class="noteColorBody">
                 <textarea name="todoitem" rows="10" cols="30" placeholder="Enter your text here ...">{{todo.toDoText}}</textarea>
                 <div class = "noteButtons">
-                  <button class = "noteButton" type="submit">save</button>
-                  <button class = "noteButton" type="submit">update</button>
+                  <button class = "noteButton" type="submit" (click) = "onSubmitSave()">save</button>
+                  <button class = "noteButton" type="submit" (click) = "onSubmitUpdate()">update</button>
                 </div>
               </div>
             </form>

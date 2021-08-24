@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'workspace/:id/todo', component:WorkspaceComponent},
+  {path: 'workspace/:id/todo/:toDoId', component:WorkspaceComponent},
   {path: 'workspace/:id/today', component:WorkspaceTodayComponent},
   {path: 'workspace/:id/:significance', component:WorkspaceSignificanceComponent},
   {path: 'admin/panel/view', component:UserViewComponent},
