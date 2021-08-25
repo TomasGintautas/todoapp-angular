@@ -32,11 +32,11 @@ export class ToDoService {
   }
 
   updateToDo(id: any, toDoId: any, todo: Todo): Observable<Todo[]>{
-    return this.apiService.put('/workspace/'+ id + '/todo' + toDoId)
+    return this.apiService.put('/workspace/'+ id + '/todo/' + toDoId)
   }
 
   deleteToDo(id: any, toDoId: any): Observable<any> {
-    return this.apiService.delete('/workspace/' + id + '/todo' + toDoId);
+    return this.apiService.delete('/workspace/' + id + '/todo/' + toDoId);
   }
 
   deleteOldToDo(id: any): Observable<any> {

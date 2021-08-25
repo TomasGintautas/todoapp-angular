@@ -44,14 +44,11 @@ export class WorkspaceComponent implements OnInit {
     this.userService.getUser(this.route.snapshot.paramMap.get('id')).subscribe(data => {
       this.user = data;
     });
-    this.toDoService.getToDo(this.route.snapshot.paramMap.get('id'), this.route.snapshot.paramMap.get('toDoId')).subscribe(data => {
-      this.todo = data;
-    });
   }
 
-  onDelete(): void {
-    this.toDoService.deleteToDo(this.todo.ownerId, this.todo.id).subscribe(data => {
-      this.router.navigate(['/workspace/' + this.todo.ownerId + '/todo'])
+  onDelete(ownerId: number,toDoId: number): void {
+    this.toDoService.deleteToDo(ownerId, toDoId).subscribe(data => {
+      this.router.navigate(['/workspace/' + ownerId + '/todo'])
     });
   }
 

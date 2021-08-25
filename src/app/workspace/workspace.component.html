@@ -51,7 +51,7 @@
                     <option value="Important" ngValue="2" [selected]="todo.significanceId == 2">Important</option>
                     <option value="Urgent" ngValue="3" [selected]="todo.significanceId == 3">Urgent</option>
                   </select>
-                  <p class="close" (click)="onDelete()">x</p>
+                  <p class="close" (click)="onDelete(todo.ownerId,todo.id)">x</p>
                 </div>
                 <div class="deadlineForm">
                   <label class="deadlineLabel">Deadline: </label>
